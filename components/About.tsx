@@ -4,8 +4,8 @@ const About: React.FC = () => {
   const details = [
     { label: 'Full Name', value: 'Azizul Hakim' },
     { label: 'City', value: 'Rangpur, Bangladesh' },
-    { label: 'Age', value: '21 Years Old' },
-    { label: 'Email', value: 'azizulhakim124@gmail.com' },
+    { label: 'Age', value: '24 Years Old' },
+    { label: 'Email', value: 'azizulhakimpf@gmail.com' },
     { label: 'Nationality', value: 'Bangladeshi' },
     { label: 'Specialization', value: 'YouTube Promotion & SEO Expert' },
   ];
@@ -23,12 +23,12 @@ const About: React.FC = () => {
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/5 bg-[#111]">
               <img 
                 // Notun Google Content Link Add Kora Hoyeche
-                src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi25LTz1sL9E8Q3K7UnFAqp9qiGoT1gnO6K4dZTkhyJJtmcGG2dbavHzvtMge6f2cuj0D93F5_SZ3KV3XOthi3591vT89nJO5jAzTN_2I4cXdhIGTzy7bt_v-0Z75rgDiYTm0RpkLJw74d-jviHjkWra2ig2QXX8q248q5njt0OD8AUMQi1R2AT7jsrD3M/s1600/Screenshot_10.png" 
-                alt="Sujon Working" 
+                src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEixGmU-qeHQXgVOrAo5O3fd9bFuBLGmZX7YRMEr0X0CUldex9P_SQi_5U3_HueqABTfhKR8_gKbS1U280gMDoM-46xK2LdtKzR6_poqrdh2SjBC4sfPikDfFCOu0wYIasaJ2l3MM-6fonIx4tCzjFpUl0O-2gfly18DG-vg-XBdo5bA_vENzKMkKr6bYFzK/s320/photo_2026-03-03_14-36-45.jpg" 
+                alt="Azizul Working" 
                 className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100 object-cover"
                 onError={(e) => {
                     // Jodi kono karone image load na hoy, tar jonno fallback
-                    (e.target as HTMLImageElement).src = "https://via.placeholder.com/600x800?text=Sujon+Ahmed";
+                    (e.target as HTMLImageElement).src = "https://via.placeholder.com/600x800?text=Azizul+Hakim";
                 }}
               />
             </div>
@@ -48,7 +48,7 @@ const About: React.FC = () => {
                 About <span className="underline decoration-yellow-500 decoration-2 underline-offset-[12px]">Me!</span>
               </h3>
               <p className="text-gray-400 text-lg leading-relaxed mb-10 font-light text-justify">
-                 <span className="text-white font-medium"></span> I’m Sujon Ahmed, a professional digital marketer with a wealth of experience in SEO technical skills, social media management, and Google Ads campaigns. I specialize in helping businesses like yours attract more customers, increase visibility, and achieve measurable growth through strategic, data-driven marketing.
+                 <span className="text-white font-medium"></span> I’m Azizul Hakim , a professional digital marketer with a wealth of experience in SEO technical skills, social media management, and Google Ads campaigns. I specialize in helping businesses like yours attract more customers, increase visibility, and achieve measurable growth through strategic, data-driven marketing.
               </p>
             </div>
 
