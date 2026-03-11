@@ -39,10 +39,10 @@ const Resume: React.FC = () => {
 
   const experience = [
     { 
-      year: '2022 - Now', 
+      year: '2020 - Now', 
       title: 'Professional Digital Marketer', 
-      company: 'CEO, Sujon IT Expert.',
-      desc: 'As the CEO of Sujon-IT-Expert for the past 4 years, I have been driving business growth through expert YouTube SEO, Video Promotion, Google/Facebook Ads, and Website SEO. I specialize in delivering high-impact digital strategies that maximize brand visibility and ROI.'
+      company: 'CEO, Azizul IT Expert.',
+      desc: 'As the CEO of Azizul-IT-Expert for the past 4 years, I have been driving business growth through expert YouTube SEO, Video Promotion, Google/Facebook Ads, and Website SEO. I specialize in delivering high-impact digital strategies that maximize brand visibility and ROI.'
     },
     { 
       year: '2021 - 2022', 
