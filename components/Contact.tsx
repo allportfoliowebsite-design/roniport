@@ -38,7 +38,7 @@ const Contact: React.FC = () => {
       <div className="grid md:grid-cols-3 gap-10 mb-20">
         {[
           { icon: '📍', title: 'Location', value: 'Rangpur, Bangladesh' },
-          { icon: '📱', title: 'WhatsApp', value: '+8801763021451' },
+          { icon: '📱', title: 'WhatsApp', value: '+8801774207415' },
           { icon: '📧', title: 'Email', value: 'azizulhakimpf@gmail.com' }
         ].map((item, i) => (
           <div key={i} className="glass p-8 rounded-3xl text-center neon-border group">
