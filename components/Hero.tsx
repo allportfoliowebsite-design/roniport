@@ -47,7 +47,7 @@ const Hero: React.FC = () => {
         <div className="absolute -inset-2 bg-gradient-to-r from-yellow-400 to-orange-600 rounded-full blur-md opacity-30 group-hover:opacity-60 transition duration-1000"></div>
         <div className="relative w-56 h-56 md:w-72 md:h-72 rounded-full overflow-hidden border-4 border-[#0a0a0a] shadow-2xl bg-[#111]">
           <img 
-            src="https://kommodo.ai/i/E1sPRSrcjPhOjiDvyTJQ" 
+            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgjh9q-HZRd903tMw2coPgIyP_jhxy1vUqZKHd3rFr419MrnSYkK0YfXqx9nWSsnLiWAZ7GrDMxBNvf_W2SaA_qUGFtSj9MlCXUlnfKaf9mGjgiCqei2g1mMfIlPZrwQW5XkTjQYl_xb8uKRFxBNZ1zLAISu8CEqa7D_CNEXQFBzFBTMHgh2pF9jZEsZ9A/s320/WhatsApp%20Image%202026-09-13%20at%209.57.17%20PM.jpeg" 
             alt="Azizul Hakim" 
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
           />
