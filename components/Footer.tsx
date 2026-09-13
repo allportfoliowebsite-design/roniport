@@ -64,7 +64,7 @@ const Footer: React.FC = () => {
               <h3 className="text-xl font-bold mb-6">Direct Message Me</h3>
               <div className="flex items-center gap-4 text-gray-400 text-lg group">
                 <i className="fab fa-whatsapp text-purple-600 text-2xl"></i>
-                <a href="https://wa.me/8801774207415" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">+8801763021451</a>
+                <a href="https://wa.me/8801774207415" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">+8801774207415</a>
               </div>
             </div>
 
