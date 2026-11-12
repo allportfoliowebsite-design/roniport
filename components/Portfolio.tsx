@@ -201,7 +201,7 @@ const Portfolio: React.FC = () => {
         </div>
       )}
 
-      {/* Lightbox Modal (Clean Video without Top Title/Channel Overlay) */}
+      {/* Lightbox Modal (হুবহু স্ক্রিনশটের মতো ক্লিন প্লেয়ার) */}
       {selectedItem && (
         <div
           className="fixed inset-0 z-[999] bg-black/95 flex items-center justify-center p-4 backdrop-blur-md"
@@ -219,10 +219,10 @@ const Portfolio: React.FC = () => {
             </button>
 
             {getYouTubeId(selectedItem.videoUrl) ? (
-              <div className="relative w-full max-w-[380px] aspect-[9/16] rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-black">
-                {/* উপরের টাইটেল ও চ্যানেল নাম হাইড করার জন্য iframe-কে উপরে-নিচে সামান্য ক্রপ করা হয়েছে */}
+              <div className="relative w-full max-w-[380px] aspect-[9/16] rounded-2xl overflow-hidden shadow-2xl border border-yellow-500/30 bg-black">
+                {/* শুধু উপরের টাইটেল অংশটি হাইড হয়ে নিচের কন্ট্রোল বার পুরোপুরি দেখা যাবে */}
                 <iframe
-                  className="w-full h-[calc(100%+140px)] -mt-[70px] pointer-events-auto"
+                  className="w-full h-[calc(100%+75px)] -mt-[75px] pointer-events-auto"
                   src={`https://www.youtube.com/embed/${getYouTubeId(selectedItem.videoUrl)}?autoplay=1&rel=0&modestbranding=1&iv_load_policy=3`}
                   title={selectedItem.title}
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
