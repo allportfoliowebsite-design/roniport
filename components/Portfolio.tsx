@@ -14,7 +14,6 @@ const Portfolio: React.FC = () => {
 
   const categories = ['All', 'YouTube', 'SEO', 'Ads', 'Dashboards'];
 
-  // যেকোনো YouTube বা Shorts লিংক থেকে Video ID বের করার ফাংশন
   const getYouTubeId = (url?: string) => {
     if (!url) return null;
     const regExp = /(?:youtube\.com\/(?:shorts\/|watch\?v=|embed\/)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
@@ -130,7 +129,6 @@ const Portfolio: React.FC = () => {
       {/* Smart Grid */}
       <div className="grid grid-cols-1 md:grid-cols-6 gap-8">
         {filteredWorks.slice(0, itemsToShow).map((work, idx) => {
-          // videoUrl অথবা ভুল করে img-এ YouTube লিংক দিলেও সেটি চিনে নেবে
           const videoId = getYouTubeId(work.videoUrl) || getYouTubeId(work.img);
           const thumbnailSrc = videoId
             ? `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`
@@ -150,7 +148,6 @@ const Portfolio: React.FC = () => {
                   src={thumbnailSrc}
                   alt={work.title}
                   onError={(e) => {
-                    // যদি hqdefault না পায় তবে mqdefault লোড করবে
                     if (videoId && !e.currentTarget.src.includes('mqdefault')) {
                       e.currentTarget.src = `https://i.ytimg.com/vi/${videoId}/mqdefault.jpg`;
                     }
@@ -204,7 +201,7 @@ const Portfolio: React.FC = () => {
         </div>
       )}
 
-      {/* Lightbox Modal (Image & Video) */}
+      {/* Lightbox Modal (Clean Video without Top Title/Channel Overlay) */}
       {selectedItem && (
         <div
           className="fixed inset-0 z-[999] bg-black/95 flex items-center justify-center p-4 backdrop-blur-md"
@@ -216,16 +213,17 @@ const Portfolio: React.FC = () => {
           >
             <button
               onClick={() => setSelectedItem(null)}
-              className="absolute -top-12 right-0 text-white hover:text-yellow-500 text-sm font-bold uppercase tracking-widest bg-white/10 px-4 py-2 rounded-full"
+              className="absolute -top-12 right-0 text-white hover:text-yellow-500 text-sm font-bold uppercase tracking-widest bg-white/10 px-4 py-2 rounded-full z-20"
             >
               ✕ Close
             </button>
 
             {getYouTubeId(selectedItem.videoUrl) ? (
-              <div className="w-full max-w-[380px] aspect-[9/16] rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-black">
+              <div className="relative w-full max-w-[380px] aspect-[9/16] rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-black">
+                {/* উপরের টাইটেল ও চ্যানেল নাম হাইড করার জন্য iframe-কে উপরে-নিচে সামান্য ক্রপ করা হয়েছে */}
                 <iframe
-                  className="w-full h-full"
-                  src={`https://www.youtube.com/embed/${getYouTubeId(selectedItem.videoUrl)}?autoplay=1&rel=0`}
+                  className="w-full h-[calc(100%+140px)] -mt-[70px] pointer-events-auto"
+                  src={`https://www.youtube.com/embed/${getYouTubeId(selectedItem.videoUrl)}?autoplay=1&rel=0&modestbranding=1&iv_load_policy=3`}
                   title={selectedItem.title}
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
