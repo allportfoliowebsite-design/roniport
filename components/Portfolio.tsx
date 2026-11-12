@@ -14,8 +14,9 @@ const Portfolio: React.FC = () => {
 
   const categories = ['All', 'YouTube', 'SEO', 'Ads', 'Dashboards'];
 
-  // YouTube URL থেকে Video ID বের করার ফাংশন
-  const getYouTubeId = (url: string) => {
+  // যেকোনো YouTube বা Shorts লিংক থেকে Video ID বের করার ফাংশন
+  const getYouTubeId = (url?: string) => {
+    if (!url) return null;
     const regExp = /(?:youtube\.com\/(?:shorts\/|watch\?v=|embed\/)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
     const match = url.match(regExp);
     return match ? match[1] : null;
@@ -28,7 +29,7 @@ const Portfolio: React.FC = () => {
       img: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh_e5PqB3stHLXQnAqxhv3Kfr5mBv8mlnS3uDglxmySSue-Sn2Q2n134EbEfIiZxPPLlCA-k5OOLpa2OwI3RoTTXvKBQrG2tUfYu20u2fo9jC2TvQNjJAvs9PrjAGAwgCP-unB0PbsqhQhY2YFy-CFl1jUi_VDxQZ5fVJfsQbhwtiL3_JsP_SiIDq6EDOw/s320/Screenshot_4.png',
     },
     {
-      title: 'YouTube Video SEO (Video Review)',
+      title: 'YouTube Video SEO (Client Review)',
       category: 'SEO',
       videoUrl: 'https://youtube.com/shorts/4bME65k3JzE?si=MJBRazPx_gXb-06q',
     },
@@ -50,4 +51,198 @@ const Portfolio: React.FC = () => {
     {
       title: 'Payment Proof',
       category: 'Dashboards',
-      img: '
+      img: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh9sjLEJadTm9VMaC-vKXg8zpAX-HAckO4Prl_qpD7EEP8cHAHOjtmsj9DQdVwXLglU3qgYif2CyQb8kekxHOj8i03JYHMwCVWHEsnMJPDbpKM_bpXRkCQFSJAI4-id84MyViqCR4BOEdw-R8sZq9GW8G4b3aKoVu83vVUsr5gd0PidY9ph-gMm7EAOTsE/s1600/Screenshot_1.png',
+    },
+    {
+      title: 'Extra SEO Project',
+      category: 'SEO',
+      img: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiVkMLY-Azlp-5dOv5GbizL6iRMvthUQalrraBC8cKZaI3Fa_L0kfuA_9-MQtNTi0k63WHhrm5j1ymzBEQR4vjzl6RnF6IFwsgYT4_IAhbTWMRhPX_f4hKbetGsRetd8p9KIqIuiGgCvTGS7IyXVVlXB8OY9hKsmdeadFsFlup_AP_mBSp85lzmVziGzmw/s320/Screenshot_8.png',
+    },
+    {
+      title: 'YouTube Monetization',
+      category: 'YouTube',
+      img: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgkKs06zsXbdB3vDF0jndXSkabA0MlqsHna0kZuDUOiQ_EDl85SXduwTpii0rQQ0hIK-2OTRpnzsThNmimBk1rFABcwhkbhhTe0b6UC0jWZF-oifRQ9KAE7efDwMCRxqS2uhhB2eONXq5K8NBWT5M-P0fc7XXzt1nmk-Z00Qb50uAz3hqiIRsgAoTPM1rg/s320/Screenshot_5.png',
+    },
+    {
+      title: 'Google Ads Campaign',
+      category: 'Ads',
+      img: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgMJPrs4zsjnn1NPsfculswbPM9gv3HR7B2cS-809QPNH5Ux2dnmInQ0kE7drVhsKTcHdv6Rgrg3WN3qhaPIcWe57vpMSzhCOmCYLngEtnJHyFtKbDTW4SDDXUdokuMyFaUNJLc69_tNP7-_U8weD5rQU71pHUc1Nmb_q6uxdyFxYgPZQAJNhZLyyy2O9s/s320/Screenshot_12.png',
+    },
+    {
+      title: 'YouTube Monetization',
+      category: 'YouTube',
+      img: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi3SayzUaqkJc5BJRb7zGGNMESjpN4pHd2-VYR-Hw1UTvX_kaw0A91xXHei9Zeh3zxB-VcZj2Vd2ApeCy2BCJL2IoDNnpL-B3SQU-RyAfF24tRnZmm4UJFGqepYme2BJN-m3F9hX-GYFPOVS4-453ODIkdTPSM6VC-q-9nTNhUJ_uqjqmTZRMEVrTpnxAQ/s320/Screenshot_26.png',
+    },
+    {
+      title: 'Google Ads Campaign',
+      category: 'Ads',
+      img: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjn82HBu_VchHmcIBAQWjY-vfrDbDcB_muJxPhP3qiVMXMkyL8vGa9RPQCkU3kj0sMku005ZlfM7ZGHqU4lFsZJNq72kc8P_nWou9dp3Q0aIzZfqg6vRF0xaPvoZvB2DE4-P3rRriwektViwTkaViwln-R6Yv1CkerMWEBMBXZTdgE5P7jzEYsToMdBoLA/s320/Screenshot_20.png',
+    },
+    {
+      title: 'Google Ads Campaign',
+      category: 'Ads',
+      img: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEghrt4Ftl0seHhJ5s4Q-5s0R6KyvgTLPSwsqavw682TpkYCg4wTWOXqd8x0KLF3aQMhtP7NAN_YODW_RYueVVcRPMLxyWJAPv0WlmMs-L5KlFI7Cm1tRKl96P3UMrZxwkYmSE47iXh0JNUJXSPe8c5RTL5ajyZxqun9LseumUWHflU7VTwLKNENpg9nGG4/s320/Screenshot_13.png',
+    },
+    {
+      title: 'YouTube Video SEO',
+      category: 'SEO',
+      img: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhAtlfEt-IBB911hZr-EoR3Skiv9Cw4nV8VAF9FujfUvSjBXbAtyakA79pMefUPu_Wvvj4lShcJOZ-pughtn_TVh2zmt-0hjOtw3D4tSB1dsX-RA0n3hFtuI6DfIAcWg6S9K9uvFRr1xEp02CDt_60hdFHYkZw1BFyk-potYVpl4JF7w8VMN2VUFMQnqGw/s320/Screenshot_15.png',
+    },
+    {
+      title: 'YouTube Video SEO',
+      category: 'SEO',
+      img: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh81P2ZqFeHCg4lgxP3tWbJPEtrM0q1NxUMAmeAka4rsXI4y-Sez5qnfGajS5GNyb68DdJqPthdnGPlirS3MmFAV9eL8vif3RGTdmKuh_CmMkmIsRRLAxqSulVHxiy4hi1cp-_1UDvTaybmpA7herAZSSPOrEB6Mc70bcUEw1eDEjSpzOS2ddDpewT55Is/s320/Screenshot_11.png',
+    },
+    {
+      title: 'YouTube Monetization',
+      category: 'YouTube',
+      img: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj2R7cLXNs0ELL9dzvrElhG6p48momYCLxHDwJR2y2SqZTl6aShpSQdLiKDHI5nFMcF5yuv4awfjW6B8gbzUYDfQUTdYkBrZl_rOAv2BfrcUnZbe95-RIAhkimTzrWuVM_-nZon4vQQtZpqVgkXPILWCVRDHWVy42pXgtkWdrqrY1_RXmnK4YjZzq5QEnk/s320/Screenshot_22.png',
+    },
+    {
+      title: 'YouTube Monetization',
+      category: 'YouTube',
+      img: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiL4oeLYQt1ZT8mQCRcPqpU9lv7vN-PV-7hHSBZbDWcU5Hx6sy1oJ1IQ49i4uFMqObQfJH1kHcAxMhnkhC8zV5r0hk6XwZ5ho81YpNGI7pmVcmIxz3Z2Rk286GQEw_7ECL1ejOtvBe7gAUiKBw8SFxNR33x7ASQHabronY2_0PShWykpWLSa4F6Ri6FroE/s320/Screenshot_21.png',
+    },
+  ];
+
+  const filteredWorks = filter === 'All' ? works : works.filter(w => w.category === filter);
+
+  return (
+    <div className="max-w-7xl mx-auto px-6 pt-0 pb-20 bg-[#050505] min-h-screen text-white font-sans">
+      <div className="text-center mb-10 pt-4">
+        <h2 className="text-yellow-500 font-bold uppercase tracking-[0.3em] text-[10px] mb-2">Portfolio</h2>
+        <h3 className="text-3xl md:text-5xl font-black italic uppercase tracking-tighter">My Recent Works</h3>
+      </div>
+
+      {/* Filter Tabs */}
+      <div className="flex flex-wrap justify-center gap-3 mb-10">
+        {categories.map(cat => (
+          <button
+            key={cat}
+            onClick={() => { setFilter(cat); setItemsToShow(5); }}
+            className={`px-6 py-2 rounded-xl text-[10px] font-bold uppercase tracking-widest transition-all ${filter === cat ? 'bg-yellow-500 text-black shadow-lg shadow-yellow-500/20' : 'bg-[#111] text-gray-400 border border-white/5 hover:border-yellow-500'}`}
+          >
+            {cat}
+          </button>
+        ))}
+      </div>
+
+      {/* Smart Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-6 gap-8">
+        {filteredWorks.slice(0, itemsToShow).map((work, idx) => {
+          // videoUrl অথবা ভুল করে img-এ YouTube লিংক দিলেও সেটি চিনে নেবে
+          const videoId = getYouTubeId(work.videoUrl) || getYouTubeId(work.img);
+          const thumbnailSrc = videoId
+            ? `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`
+            : work.img;
+
+          return (
+            <div
+              key={idx}
+              className={`group flex flex-col bg-[#0d0d0d] rounded-[2rem] p-4 border border-white/10 hover:border-yellow-500/40 transition-all duration-500 ${idx < 2 ? 'md:col-span-3' : 'md:col-span-2'}`}
+            >
+              {/* Image / Video Box */}
+              <div
+                onClick={() => setSelectedItem({ ...work, videoUrl: videoId ? `https://www.youtube.com/watch?v=${videoId}` : undefined })}
+                className="relative h-[280px] w-full rounded-2xl overflow-hidden bg-black cursor-pointer"
+              >
+                <img
+                  src={thumbnailSrc}
+                  alt={work.title}
+                  onError={(e) => {
+                    // যদি hqdefault না পায় তবে mqdefault লোড করবে
+                    if (videoId && !e.currentTarget.src.includes('mqdefault')) {
+                      e.currentTarget.src = `https://i.ytimg.com/vi/${videoId}/mqdefault.jpg`;
+                    }
+                  }}
+                  className={`w-full h-full ${videoId ? 'object-cover object-center' : 'object-cover object-top'} transition-transform duration-700 group-hover:scale-110`}
+                />
+
+                {videoId ? (
+                  <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-all flex items-center justify-center">
+                    <div className="bg-yellow-500 text-black w-14 h-14 rounded-full flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform">
+                      <span className="text-xl font-bold ml-1">▶</span>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
+                    <div className="bg-yellow-500 text-black p-3 rounded-full">
+                      <span className="text-xl font-bold">🔍</span>
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              {/* Content */}
+              <div className="mt-6 px-1">
+                <span className="text-[10px] text-yellow-500 font-black uppercase tracking-widest">{work.category}</span>
+                <h4 className="text-lg font-bold text-white mt-1 group-hover:text-yellow-500 transition-colors line-clamp-1">{work.title}</h4>
+                <div
+                  onClick={() => setSelectedItem({ ...work, videoUrl: videoId ? `https://www.youtube.com/watch?v=${videoId}` : undefined })}
+                  className="mt-4 pt-4 border-t border-white/5 flex justify-between items-center opacity-60 hover:opacity-100 cursor-pointer"
+                >
+                  <button className="text-[10px] font-bold uppercase tracking-widest">
+                    {videoId ? 'Watch Video Review' : 'View Full Case'}
+                  </button>
+                  <span className="text-yellow-500">→</span>
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+
+      {/* See More Button */}
+      {itemsToShow < filteredWorks.length && (
+        <div className="text-center mt-12">
+          <button
+            onClick={() => setItemsToShow(works.length)}
+            className="px-12 py-4 bg-yellow-500 rounded-2xl font-black text-[11px] uppercase tracking-widest text-black hover:scale-105 transition-all shadow-2xl shadow-yellow-500/20"
+          >
+            Explore More Results ↗
+          </button>
+        </div>
+      )}
+
+      {/* Lightbox Modal (Image & Video) */}
+      {selectedItem && (
+        <div
+          className="fixed inset-0 z-[999] bg-black/95 flex items-center justify-center p-4 backdrop-blur-md"
+          onClick={() => setSelectedItem(null)}
+        >
+          <div
+            className="relative max-w-5xl w-full flex items-center justify-center"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setSelectedItem(null)}
+              className="absolute -top-12 right-0 text-white hover:text-yellow-500 text-sm font-bold uppercase tracking-widest bg-white/10 px-4 py-2 rounded-full"
+            >
+              ✕ Close
+            </button>
+
+            {getYouTubeId(selectedItem.videoUrl) ? (
+              <div className="w-full max-w-[380px] aspect-[9/16] rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-black">
+                <iframe
+                  className="w-full h-full"
+                  src={`https://www.youtube.com/embed/${getYouTubeId(selectedItem.videoUrl)}?autoplay=1&rel=0`}
+                  title={selectedItem.title}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+            ) : (
+              <img
+                src={selectedItem.img}
+                alt="Preview"
+                className="max-w-full max-h-[85vh] rounded-xl shadow-2xl"
+              />
+            )}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default Portfolio;
