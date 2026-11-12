@@ -30,7 +30,7 @@ const Portfolio: React.FC = () => {
     {
       title: 'YouTube Video SEO (Client Review)',
       category: 'SEO',
-      videoUrl: 'https://youtube.com/shorts/4bME65k3JzE?si=MJBRazPx_gXb-06q',
+      videoUrl: 'https://youtube.com/shorts/N9ZcX5lR7Eg?feature=share',
     },
     {
       title: 'Google Ads Campaign',
@@ -220,7 +220,6 @@ const Portfolio: React.FC = () => {
 
             {getYouTubeId(selectedItem.videoUrl) ? (
               <div className="relative w-full max-w-[380px] aspect-[9/16] rounded-2xl overflow-hidden shadow-2xl border border-yellow-500/30 bg-black">
-                {/* 75px থেকে বাড়িয়ে 115px করা হয়েছে যাতে প্রোফাইল ছবি ও চ্যানেলের নাম পুরোপুরি ঢেকে যায় */}
                 <iframe
                   className="w-full h-[calc(100%+115px)] -mt-[115px] pointer-events-auto"
                   src={`https://www.youtube.com/embed/${getYouTubeId(selectedItem.videoUrl)}?autoplay=1&rel=0&modestbranding=1&iv_load_policy=3`}
